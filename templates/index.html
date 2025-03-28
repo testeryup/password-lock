@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Door Lock</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Hệ thống khoá cửa thông minh</h2>
+        <div id="door-status" class="locked">
+            Cửa đã <span id="status-text">KHOÁ</span>
+        </div>
+        <div class="keypad">
+            <div class="display">
+                <input type="password" id="password" placeholder="Enter PIN" readonly>
+            </div>
+            <div class="keys">
+                <button class="key" onclick="addDigit('1')">1</button>
+                <button class="key" onclick="addDigit('2')">2</button>
+                <button class="key" onclick="addDigit('3')">3</button>
+                <button class="key" onclick="addDigit('4')">4</button>
+                <button class="key" onclick="addDigit('5')">5</button>
+                <button class="key" onclick="addDigit('6')">6</button>
+                <button class="key" onclick="addDigit('7')">7</button>
+                <button class="key" onclick="addDigit('8')">8</button>
+                <button class="key" onclick="addDigit('9')">9</button>
+                <button class="key" onclick="clearInput()">C</button>
+                <button class="key" onclick="addDigit('0')">0</button>
+                <button class="key enter" onclick="unlockDoor()">↵</button>
+            </div>
+        </div>
+        <div class="actions">
+            <button onclick="unlockDoor()" class="action-btn unlock">Mở khoá</button>
+            <button onclick="lockDoor()" class="action-btn lock">Khoá</button>
+        </div>
+        <p id="message"></p>
+        <div id="countdown" class="hidden">Tự động khoá cửa trong <span id="timer">20</span> giây</div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
