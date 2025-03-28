@@ -1,1 +1,5 @@
-fastAPI
+fastapi
+uvicorn
+pygame
+jinja2
+python-multipart
